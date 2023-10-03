@@ -23,7 +23,7 @@ services:
       - NEXT_PUBLIC_GO_BASE_URL=http://backend:8080
       - NEXT_PUBLIC_REACT_BASE_URL=http://frontend:3000/v1/
     depends_on:
-      - backend
+      - crm-backend
 
   db-crm:
     image: postgres
