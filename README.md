@@ -18,7 +18,6 @@ like in this case all the config files are store in /config folder which is crea
 all the host should be written as service names 
 eg :- 
 ```
-- localhost:8080 for backend --> crm-backend
 - localhost:5432 for pg      --> db-crm
 - localhost:6379 for redis   --> cache-redis
 ```
