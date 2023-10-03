@@ -1,0 +1,17 @@
+# Sample Configuration File
+
+# Database Configuration
+database:
+  host: db-crm
+  port: 5432
+  dbname: crm
+  user: postgres
+  password: Reset@123
+  sslmode: disable
+
+# Redis Configuration
+redis:
+  host: cache-redis
+  port: 6379
+  password: "" # Leave empty if no password is required
+  db: 0
