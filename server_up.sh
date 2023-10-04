@@ -1,6 +1,6 @@
 #!/bin/bash
 
-backend="https://github.com/ignitingMinds/quickquotebackend.git"
+backend="https://github.com/ignitingMinds/bcrmBackend.git"
 frontend="https://github.com/ignitingMinds/quickquoteUI.git"
 
 directory_name="bharat-crm"
@@ -19,9 +19,16 @@ pwd
 
 echo "cloning backend"
 git clone $backend
+cd bcrmBackend
+git checkout QA
+cd ..
+
 
 echo "cloning frontend"
 git clone $frontend
+cd quickquoteUI
+git checkout UAT
+cd ..
 
 # echo "cloning docker compose file"
 # git clone $docker_compose
@@ -31,7 +38,7 @@ cp ../docker-compose.yml .
 
 # loading the configurations 
 echo "adding configurations"
-cp ../configs/config.yaml quickquotebackend/src/config/
+cp ../configs/config.yaml bcrmBackend/src/config/
 cp ../configs/.env quickquoteUI/
 
 

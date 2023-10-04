@@ -5,7 +5,7 @@ services:
   crm-backend:
     build: 
       dockerfile: dockerfile
-      context: ./quickquotebackend
+      context: ./bcrmBackend
 
     ports:
       - 8080:8080
