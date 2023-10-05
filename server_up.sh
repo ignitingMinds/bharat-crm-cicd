@@ -18,16 +18,16 @@ cd $directory_name
 pwd
 
 echo "cloning backend"
-sudo git clone $backend
+git clone $backend
 cd bcrmBackend
-sudo git checkout QA
+git checkout QA
 cd ..
 
 
 echo "cloning frontend"
-sudo git clone $frontend
+git clone $frontend
 cd quickquoteUI
-sudo git checkout UAT
+git checkout UAT
 cd ..
 
 # echo "cloning docker compose file"
