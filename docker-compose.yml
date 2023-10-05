@@ -6,6 +6,8 @@ services:
     build: 
       dockerfile: dockerfile
       context: ./bcrmBackend
+      tags:
+        - backend.image
 
     ports:
       - 8080:8080
@@ -17,6 +19,9 @@ services:
     build:
       context: ./quickquoteUI
       dockerfile: Dockerfile
+      tags:
+        - frontend.image
+
     ports:
       - 3000:3000
     environment:

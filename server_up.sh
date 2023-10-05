@@ -41,7 +41,13 @@ echo "adding configurations"
 cp ../configs/config.yaml bcrmBackend/src/config/
 cp ../configs/.env quickquoteUI/
 
+# down
+echo "down previous compose"
+docker compose down
 
+echo "removing old images"
+docker rmi bharat-crm-crm-backend
+docker rmi bharat-crm-crm-frontend
 
 # code related to the docker compoes up
 # creating image and deploying
