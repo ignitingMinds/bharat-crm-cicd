@@ -1,7 +1,7 @@
 #!/bin/bash
 
-backend="https://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@github.com/ignitingMinds/bcrmBackend.git"
-frontend="https://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@github.com/ignitingMinds/quickquoteUI.git"
+backend="git@github.com:ignitingMinds/bcrmBackend.git"
+frontend="git@github.com:ignitingMinds/quickquoteUI.git"
 
 directory_name="bharat-crm"
 
