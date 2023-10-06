@@ -43,14 +43,14 @@ cp ../configs/.env quickquoteUI/
 
 # down
 echo "down previous compose"
-docker compose down
+sudo docker-compose down
 
 echo "removing old images"
-docker rmi bharat-crm-crm-backend
-docker rmi bharat-crm-crm-frontend
+sudo docker rmi bharat-crm-crm-backend
+sudo docker rmi bharat-crm-crm-frontend
 
 # code related to the docker compoes up
 # creating image and deploying
 echo "running docker-compose"
-docker compose up -d 
+sudo docker-compose up -d 
 
