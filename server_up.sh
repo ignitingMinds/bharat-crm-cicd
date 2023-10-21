@@ -14,6 +14,7 @@ fi
 
 echo "Creating directory $directory_name"
 mkdir $directory_name
+#sudo chown -R $USER ./$directory_name
 cd $directory_name
 pwd
 
@@ -38,7 +39,7 @@ cp ../docker-compose.yml .
 
 # loading the configurations 
 echo "adding configurations"
-cp ../configs/config.yaml bcrmBackend/src/config/
+#cp ../configs/config.yaml bcrmBackend/src/config/
 cp ../configs/.env quickquoteUI/
 
 # down
@@ -46,11 +47,10 @@ echo "down previous compose"
 sudo docker-compose down
 
 echo "removing old images"
-sudo docker rmi bharat-crm-crm-backend
-sudo docker rmi bharat-crm-crm-frontend
+sudo docker rmi bharat-crm_crm-backend
+sudo docker rmi bharat-crm_crm-frontend
 
 # code related to the docker compoes up
 # creating image and deploying
 echo "running docker-compose"
 sudo docker-compose up -d 
-
