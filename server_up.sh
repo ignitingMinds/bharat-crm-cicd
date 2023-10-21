@@ -49,6 +49,7 @@ if [ "$hardStart" = "true" ]; then
     sudo docker rmi bharat-crm_crm-backend
     sudo docker rmi bharat-crm_crm-frontend
 else
+    cd $directory_name
     echo ".......SOFT START.........."
 fi
 
