@@ -1,4 +1,5 @@
 #!/bin/bash
+hardStart=$1
 
 backend="git@github.com:ignitingMinds/bcrmBackend.git"
 frontend="git@github.com:ignitingMinds/quickquoteUI.git"
@@ -46,9 +47,15 @@ cp ../configs/.env quickquoteUI/
 echo "down previous compose"
 sudo docker-compose down
 
-echo "removing old images"
-sudo docker rmi bharat-crm_crm-backend
-sudo docker rmi bharat-crm_crm-frontend
+
+if [ "$hardStart" = "true" ]; then
+    echo "........HARD START........."
+    echo "removing old images"
+    sudo docker rmi bharat-crm_crm-backend
+    sudo docker rmi bharat-crm_crm-frontend
+else
+    echo ".......SOFT START.........."
+fi
 
 # code related to the docker compoes up
 # creating image and deploying

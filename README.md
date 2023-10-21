@@ -1,7 +1,8 @@
 ## Bharat-CRM-CICD
 
 ## commands :
-    ~ sh server_up.sh
+    ~ sh server_up.sh [optional] 
+    ~ hard start --> sh server_up.sh true
     ~ sh server_down.sh
 
 ## configs folder structure
