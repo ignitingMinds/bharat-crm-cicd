@@ -39,7 +39,7 @@ cp ../docker-compose.yml .
 
 # loading the configurations 
 echo "adding configurations"
-#cp ../configs/config.yaml bcrmBackend/src/config/
+cp ../configs/config.yaml bcrmBackend/src/config/
 cp ../configs/.env quickquoteUI/
 
 # down
