@@ -38,8 +38,8 @@ if [ "$hardStart" = "true" ]; then
 
     # loading the configurations 
     echo "adding configurations"
-    cp ../configs/config.yaml bcrmBackend/src/config/
-    cp ../configs/.env quickquoteUI/
+    cp ../../configs/config.yaml bcrmBackend/src/config/
+    cp ../../configs/.env quickquoteUI/
 
     # down
     echo "down previous compose"
