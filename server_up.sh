@@ -37,7 +37,7 @@ cp ../docker-compose.yml .
 
 # down
 echo "down previous compose"
-#sudo docker-compose down
+sudo docker-compose down
 # --------------------------------------------------------------------
 
 
@@ -60,7 +60,7 @@ if [ "$hardStart" = "true" ] && { [ "$service" -eq 3 ] || [ "$service" -eq 1 ]; 
     cp ../../configs/config.yaml bcrmBackend/src/config/
   
     echo "removing old backend images"
-    #sudo docker rmi bharat-crm_crm-backend
+    sudo docker rmi bharat-crm_crm-backend
 fi
 # --------------------------------------------------------------------
 
@@ -84,10 +84,10 @@ if [ "$hardStart" = "true" ] && { [ "$service" -eq 3 ] || [ "$service" -eq 2 ]; 
     cp ../../configs/.env quickquoteUI/
 
     echo "removing old frontend images"
-    #sudo docker rmi bharat-crm_crm-frontend
+    sudo docker rmi bharat-crm_crm-frontend
 fi
 # --------------------------------------------------------------------
 
 # creating image and deploying
 echo "running docker-compose up"
-#sudo docker-compose up -d
+sudo docker-compose up -d
