@@ -91,3 +91,6 @@ fi
 # creating image and deploying
 echo "running docker-compose up"
 sudo docker-compose up -d
+
+# remove the dirty images
+sudo docker rmi $(sudo docker images|grep "<none>")
