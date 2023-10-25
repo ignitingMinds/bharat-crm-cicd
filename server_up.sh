@@ -51,7 +51,7 @@ if [ "$hardStart" = "true" ] && { [ "$service" -eq 3 ] || [ "$service" -eq 1 ]; 
         cd ..
     else
         echo "running git pull"
-        cd $backend
+        cd bcrmBackend
         git pull 
         cd ..
     fi
@@ -74,7 +74,7 @@ if [ "$hardStart" = "true" ] && { [ "$service" -eq 3 ] || [ "$service" -eq 2 ]; 
         cd ..
     else
         echo "running git pull"
-        cd $frontend
+        cd quickquoteUI
         git pull 
         cd ..
     fi
