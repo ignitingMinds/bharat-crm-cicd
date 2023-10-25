@@ -1,6 +1,13 @@
 #!/bin/bash
 hardStart=$1
 service=$2
+sshAgent=$3
+
+if ["$sshAgent" = "y"]; then
+    echo adding the ssh-agent
+    eval "$(ssh-agent -s)"
+    ssh-add ~/sshkey
+fi
 
 echo "hardStart : " $hardStart
 echo "service   : "$service
