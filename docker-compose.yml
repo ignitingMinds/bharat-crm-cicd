@@ -1,9 +1,8 @@
-version: '3.1'
+version: "3.1"
 
 services:
-
   crm-backend:
-    build: 
+    build:
       dockerfile: dockerfile
       context: ./bcrmBackend
 
@@ -19,10 +18,10 @@ services:
       dockerfile: Dockerfile
 
     ports:
-      - 3000:3000
+      - 80:80
     environment:
       - NEXT_PUBLIC_GO_BASE_URL=http://backend:8080
-      - NEXT_PUBLIC_REACT_BASE_URL=http://frontend:3000/v1/
+      - NEXT_PUBLIC_REACT_BASE_URL=http://frontend:80/v1/
     depends_on:
       - crm-backend
     volumes:
@@ -33,7 +32,7 @@ services:
     environment:
       POSTGRES_PASSWORD: Reset@123
       POSTGRES_USER: postgres
-      POSTGRES_DB : crm
+      POSTGRES_DB: crm
     ports:
       - 5432:5432
 
@@ -52,5 +51,3 @@ volumes:
   pgdata:
   redisdata:
   logs:
-
-  
