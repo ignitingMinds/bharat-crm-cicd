@@ -7,6 +7,9 @@ services:
       dockerfile: dockerfile
     ports:
       - 443:443
+    depends_on:
+      - crm-backend
+      - crm-frontend
 
   crm-backend:
     build:
