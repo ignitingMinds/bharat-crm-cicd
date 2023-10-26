@@ -1,6 +1,13 @@
 version: "3.1"
 
 services:
+  crm-nginx:
+    build: 
+      context: ../nginx
+      dockerfile: dockerfile
+    ports:
+      - 443:443
+
   crm-backend:
     build:
       dockerfile: dockerfile

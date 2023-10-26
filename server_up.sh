@@ -3,6 +3,9 @@ hardStart=$1
 service=$2
 sshAgent=$3
 
+echo loading certificates
+cp -r ../httpscreds/ /nginx/
+
 if ["$sshAgent" = "y"]; then
     echo adding the ssh-agent
     eval "$(ssh-agent -s)"
