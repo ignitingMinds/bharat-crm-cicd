@@ -41,6 +41,9 @@ fi
 # --------------------------------------------------------------------
 
 # --------------------------------------------------------------------
+echo coping the nginx directory
+cp -r nginx $directory_name
+
 cd $directory_name
 echo copying docker compose file
 cp ../docker-compose.yml .
